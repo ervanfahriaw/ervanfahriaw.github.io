@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ervan Fahri Adriansyah Wahab - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 350px;
+            height: 400px;
+            background: #ddd;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #f7fafc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 5px 0;
+            color: #4a5568;
+        }
+
+        .skill-card li::before {
+            content: '✓';
+            color: #48bb78;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #f7fafc;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            width: calc(50% - 30px);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-img {
+            width: 120px;
+            height: 90px;
+            border-radius: 10px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 0.8rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: calc(50% + 30px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            top: 30px;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -40px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -40px;
+        }
+
+        .timeline-item h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .period {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: white;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-img {
+            width: 100%;
+            height: 150px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .cert-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .cert-card .year {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.9);
+            color: #2d3748;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                margin-left: 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-img {
+                width: 100%;
+                height: 120px;
+                margin-bottom: 15px;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item::before {
+                left: -25px !important;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Add top margin to account for fixed nav */
+        main {
+            margin-top: 70px;
+        }
+
+        /* Image placeholder styling */
+        .img-placeholder {
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">Ervan F.A.W</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <header id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="images/profile-hero.jpg" alt="Ervan Fahri Adriansyah Wahab" class="profile-img" style="object-fit: cover;">
+                    <h1>Ervan Fahri Adriansyah Wahab</h1>
+                    <p class="tagline">Network Engineer | IoT Developer | Innovator in Smart Aquaculture</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="downloadCV()">Download CV</a>
+                        <a href="#projects" class="btn btn-secondary">Lihat Project Saya</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="about-content">
+                    <img src="images/about-lab.jpg" alt="Ervan bekerja di laboratorium" class="about-img" style="object-fit: cover;">
+                    <div class="about-text">
+                        <p>Mahasiswa S1 Teknik Telekomunikasi Telkom University dengan spesialisasi di bidang <strong>Network Engineering (Cisco, Mikrotik, Linux)</strong> dan <strong>IoT Development (ESP32, sensor, integrasi web)</strong>.</p>
+                        
+                        <p>Aktif sebagai asisten praktikum di laboratorium dan entrepreneur di bidang inovasi akuakultur. Dengan passion yang besar dalam teknologi jaringan dan Internet of Things, saya selalu berusaha mengaplikasikan ilmu yang dipelajari untuk menciptakan solusi inovatif yang bermanfaat bagi masyarakat.</p>
+                        
+                        <p>Pengalaman sebagai entrepreneur dalam budidaya ikan guppy dan pengembangan alat IoT telah mengajarkan saya untuk berpikir kreatif dan praktis dalam memecahkan masalah sehari-hari.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>🌐 Networking</h3>
+                        <ul>
+                            <li>Cisco Network Configuration</li>
+                            <li>Mikrotik Router Management</li>
+                            <li>VLAN & InterVLAN Routing</li>
+                            <li>GNS3 Network Simulation</li>
+                            <li>Network Security & Firewall</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🐧 Linux Server</h3>
+                        <ul>
+                            <li>DHCP & DNS Configuration</li>
+                            <li>Apache Web Server</li>
+                            <li>FTP & SSH Management</li>
+                            <li>VoIP Asterisk</li>
+                            <li>System Administration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🔌 IoT Development</h3>
+                        <ul>
+                            <li>ESP32 Microcontroller</li>
+                            <li>Sensor Integration</li>
+                            <li>Web Integration</li>
+                            <li>Basic Electronics</li>
+                            <li>Hardware Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>💻 Programming</h3>
+                        <ul>
+                            <li>Python (Basic)</li>
+                            <li>C Language</li>
+                            <li>Web Development</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🤖 AI Vision</h3>
+                        <ul>
+                            <li>YOLOv11 Training</li>
+                            <li>Object Detection</li>
+                            <li>Computer Vision</li>
+                            <li>Image Processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Project Portfolio</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/guppybot.jpg" alt="GuppyBot IoT Robot" class="project-img" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="project-content">
+                            <h3>GuppyBot IoT</h3>
+                            <p>Robot mini berbasis ESP32 untuk memberi makan ikan, mengganti air, dan membersihkan kotoran secara otomatis. Dilengkapi dengan sensor dan kontrol via aplikasi web untuk monitoring real-time.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/sifon.png" alt="GuppyBot IoT Robot" class="project-img" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="project-content">
+                            <h3>Alat Sifon Portabel</h3>
+                            <p>Inovasi pompa air portabel dengan powerbank yang praktis untuk peternak ikan. Desain ergonomis dan efisien energi, memudahkan proses pembersihan akuarium di mana saja.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img img-placeholder">
+                            Screenshot Topologi Jaringan<br>
+                            (Tambahkan diagram topologi jaringan dari GNS3)
+                        </div>
+                        <div class="project-content">
+                            <h3>Proyek Jaringan Terintegrasi (UKK Paket 4)</h3>
+                            <p>Konfigurasi lengkap Mikrotik & Linux Server meliputi VLAN, DHCP, NAT, Firewall, DNS, Proxy, Hotspot, dan sistem Logging untuk infrastruktur jaringan enterprise.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img img-placeholder">
+                            Screenshot VoIP Interface<br>
+                            (Tambahkan screenshot interface Trixbox)
+                        </div>
+                        <div class="project-content">
+                            <h3>VoIP Project</h3>
+                            <p>Implementasi sistem VoIP menggunakan Trixbox dengan konfigurasi firewall dan manajemen user. Simulasi komunikasi suara over IP untuk lingkungan enterprise.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img img-placeholder">
+                            Screenshot AI Detection<br>
+                            (Tambahkan hasil deteksi YOLOv11)
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Vision untuk Akuarium</h3>
+                            <p>Proof of Concept sistem deteksi kotoran akuarium menggunakan YOLOv11. Implementasi computer vision untuk automasi maintenance akuarium berbasis AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Pengalaman</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-img img-placeholder">
+                            Foto Lab CPS<br>
+                            (Foto saat mengajar)
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Asisten Praktikum – Cyber Physical System Lab</h3>
+                            <div class="period">2024 – Sekarang</div>
+                            <p>Membimbing mahasiswa dalam praktik jaringan & telekomunikasi: topologi, GNS3, VoIP, Cisco, Erlang B/C. Bertanggung jawab dalam transfer knowledge dan hands-on experience kepada junior.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-img img-placeholder">
+                            Logo PT INTI<br>
+                            (Foto PKL/Logo)
+                        </div>
+                        <div class="timeline-content">
+                            <h3>PKL PT INTI Pindad Mitra Sejati (BUMN)</h3>
+                            <div class="period">2022</div>
+                            <p>Managed Services: inspeksi, testing, dan troubleshooting ONT/STB. Pengalaman praktis dalam maintenance infrastruktur telekomunikasi pada lingkungan enterprise BUMN.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-img img-placeholder">
+                            Foto Bisnis<br>
+                            (Foto ikan/TikTok)
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Entrepreneur</h3>
+                            <div class="period">2021 – Sekarang</div>
+                            <p>Budidaya & jual ikan guppy, membuat & menjual alat IoT (alat sifon). Aktif di TikTok dengan 5.6k followers, membangun brand dan komunitas dalam bidang akuakultur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title">Sertifikasi</h2>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-img img-placeholder">
+                            Foto Sertifikat TKJ<br>
+                            (Upload foto sertifikat)
+                        </div>
+                        <h3>Sertifikasi Kompetensi TKJ Level 3</h3>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-img img-placeholder">
+                            Logo Cisco<br>
+                            (Logo CCNA)
+                        </div>
+                        <h3>CCNA (Planned)</h3>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-img img-placeholder">
+                            Logo MikroTik<br>
+                            (Logo MTCNA)
+                        </div>
+                        <h3>MTCNA (Planned)</h3>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-img img-placeholder">
+                            Logo Security<br>
+                            (Logo Cyber Sec)
+                        </div>
+                        <h3>Cyber Security Fundamentals (Planned)</h3>
+                        <div class="year">2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Hubungi Saya</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3>Kirim Pesan</h3>
+                        <form onsubmit="submitForm(event)">
+                            <div class="form-group">
+                                <label for="name">Nama</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Kirim Pesan</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Mari Terhubung!</h3>
+                        <p style="margin-bottom: 30px;">Saya terbuka untuk diskusi tentang proyek kolaborasi, peluang karir, atau sekadar bertukar pikiran tentang teknologi.</p>
+                        <div class="social-links">
+                            <a href="mailto:ervan.fahri@example.com" class="social-link">📧 Email</a>
+                            <a href="https://linkedin.com/in/ervanfahri" class="social-link">💼 LinkedIn</a>
+                            <a href="https://tiktok.com/@ervanfahri" class="social-link">📱 TikTok</a>
+                            <a href="https://github.com/ervanfahri" class="social-link">💻 GitHub</a>
+                            <a href="https://wa.me/6281234567890" class="social-link">📲 WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ervan Fahri Adriansyah Wahab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        ↑
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // CV Download function
+        function downloadCV() {
+            // Ganti URL_GDRIVE_ANDA dengan link Google Drive CV Anda
+            const cvUrl = 'https://drive.google.com/file/d/URL_GDRIVE_ANDA/view?usp=sharing';
+            
+            // Buka CV di tab baru
+            window.open(cvUrl, '_blank');
+            
+            // Optional: Tampilkan pesan konfirmasi
+            setTimeout(() => {
+                alert('CV sedang dibuka di tab baru. Jika tidak terbuka otomatis, silakan periksa popup blocker browser Anda.');
+            }, 500);
+        }
+
+        // Contact form submission
+        function submitForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Create mailto link
+            const mailtoLink = `mailto:ervan.fahri@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)}`;
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            event.target.reset();
+            alert('Terima kasih! Email client Anda akan terbuka untuk mengirim pesan.');
+        }
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            const backToTop = document.getElementById('backToTop');
+            
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                backToTop.classList.add('show');
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section, .project-card, .skill-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Initialize hero section as visible
+        document.querySelector('header').style.opacity = '1';
+        document.querySelector('header').style.transform = 'translateY(0)';
+    </script>
+</body>
+</html>
