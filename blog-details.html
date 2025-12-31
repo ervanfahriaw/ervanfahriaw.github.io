@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ervan Fahri - Technical Article Details">
+    <meta name="keywords" content="VLAN, Network Engineering, Cisco, Mikrotik, Enterprise Networks">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ervan Fahri | VLAN Implementation Guide</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="Ervan Fahri Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./portfolio.html">Portfolio</a></li>
+                                <li><a href="./services.html">Skills</a></li>
+                                <li class="active"><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./about.html">About</a></li>
+                                        <li><a href="./portfolio.html">Portfolio</a></li>
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="https://linkedin.com/in/ervanfahri"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/ervanfahri"><i class="fa fa-github"></i></a>
+                            <a href="https://instagram.com/ervanfahri"><i class="fa fa-instagram"></i></a>
+                            <a href="https://tiktok.com/@ervanfahri"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-hero spad set-bg" data-setbg="img/blog/blog-hero.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text">
+                        <h2>IMPLEMENTING VLANS IN ENTERPRISE NETWORKS: BEST PRACTICES</h2>
+                        <ul>
+                            <li>by <span>Ervan Fahri</span></li>
+                            <li>Mar 15, 2024</li>
+                            <li>12 Comments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+                            <p>Virtual Local Area Networks (VLANs) are fundamental to modern enterprise network design, providing essential network segmentation, security, and traffic management. As a network engineering student at Telkom University and lab assistant at CPS Lab, I've implemented VLAN architectures in various simulated and real-world scenarios using both Cisco and Mikrotik equipment.</p>
+                            <p>Proper VLAN implementation can dramatically improve network performance by reducing broadcast domains, enhancing security through logical separation, and simplifying network management. This guide covers best practices based on my experience configuring enterprise networks for academic and commercial projects.</p>
+                        </div>
+                        <div class="blog__details__quote">
+                            <p>A well-designed VLAN architecture is the foundation of any secure and scalable enterprise network. Proper segmentation is not just a best practice - it's a security necessity in today's connected environments.</p>
+                            <h6>Network Security Principle</h6>
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="blog__details__desc">
+                            <h4>Key Benefits of VLAN Implementation</h4>
+                            <p>1. <strong>Enhanced Security:</strong> By separating sensitive departments (Finance, HR) from general staff networks, you limit lateral movement in case of security breaches.</p>
+                            <p>2. <strong>Improved Performance:</strong> VLANs reduce broadcast traffic, allowing switches to operate more efficiently and reducing unnecessary network congestion.</p>
+                            <p>3. <strong>Simplified Management:</strong> Logical grouping of devices makes it easier to apply policies, monitor traffic, and troubleshoot issues.</p>
+                            <p>4. <strong>Cost Efficiency:</strong> VLANs allow for network segmentation without additional physical hardware, maximizing existing infrastructure investments.</p>
+                            
+                            <h4>Practical Implementation Steps</h4>
+                            <p>In my experience teaching networking concepts at CPS Lab, I recommend this systematic approach:</p>
+                            <p><strong>Step 1: Planning & Documentation</strong> - Map out departments, device types, and security requirements before configuration.</p>
+                            <p><strong>Step 2: VLAN Creation</strong> - Create VLANs with descriptive names (e.g., VLAN10-Sales, VLAN20-Finance).</p>
+                            <p><strong>Step 3: Port Assignment</strong> - Configure switch ports as access or trunk ports appropriately.</p>
+                            <p><strong>Step 4: Inter-VLAN Routing</strong> - Implement routing between VLANs using layer 3 switches or routers.</p>
+                            <p><strong>Step 5: Security Policies</strong> - Apply ACLs and firewall rules to control traffic between VLANs.</p>
+                        </div>
+                        <div class="blog__details__tags">
+                            <span><i class="fa fa-tag"></i> Tags:</span>
+                            <a href="#">Networking</a>
+                            <a href="#">VLAN</a>
+                            <a href="#">Cisco</a>
+                            <a href="#">Mikrotik</a>
+                            <a href="#">Security</a>
+                        </div>
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="#" class="blog__details__option__item">
+                                        <h5><i class="fa fa-angle-left"></i> Previous Article</h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/prev.jpg" alt="IoT Water Monitoring">
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>IoT Water Monitoring System with ESP32 & AWS</h6>
+                                            <span>Feb 28, 2024</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="#" class="blog__details__option__item blog__details__option__item--right">
+                                        <h5>Next Article <i class="fa fa-angle-right"></i></h5>
+                                        <div class="blog__details__option__item__img">
+                                            <img src="img/blog/next.jpg" alt="Linux Server Admin">
+                                        </div>
+                                        <div class="blog__details__option__item__text">
+                                            <h6>Linux Server Administration for Network Engineers</h6>
+                                            <span>Feb 10, 2024</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__recent">
+                            <h4>Related Articles</h4>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="blog__details__recent__item">
+                                        <img src="img/blog/ri-1.jpg" alt="GNS3 vs Packet Tracer">
+                                        <h5>GNS3 vs Packet Tracer: Network Simulator Comparison</h5>
+                                        <span>Dec 30, 2023</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="blog__details__recent__item">
+                                        <img src="img/blog/ri-2.jpg" alt="VoIP Configuration">
+                                        <h5>VoIP Configuration with Asterisk: Complete Guide</h5>
+                                        <span>Nov 28, 2023</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="blog__details__recent__item">
+                                        <img src="img/blog/ri-3.jpg" alt="IoT PCB Design">
+                                        <h5>PCB Design for IoT Devices: From Concept to Production</h5>
+                                        <span>Jan 12, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__comment">
+                            <h4>Join the Discussion</h4>
+                            <p>Have questions about VLAN implementation or want to share your experiences with network segmentation? Leave a comment below!</p>
+                            <form action="#">
+                                <div class="input__list">
+                                    <input type="text" placeholder="Your Name">
+                                    <input type="text" placeholder="Email Address">
+                                    <input type="text" placeholder="Website (Optional)">
+                                </div>
+                                <textarea placeholder="Your Comment or Question"></textarea>
+                                <button type="submit" class="site-btn">Post Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo.png" alt="Ervan Fahri Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="https://linkedin.com/in/ervanfahri"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/ervanfahri"><i class="fa fa-github"></i></a>
+                            <a href="https://instagram.com/ervanfahri"><i class="fa fa-instagram"></i></a>
+                            <a href="https://tiktok.com/@ervanfahri"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://wa.me/6282116973032"><i class="fa fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>About Me</h5>
+                            <p>Telecommunications Engineering student at Telkom University specializing in Network Engineering and IoT Development with entrepreneurship experience in smart aquaculture.</p>
+                            <a href="./about.html" class="read__more">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>Quick Links</h5>
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./portfolio.html">Portfolio</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>My Skills</h5>
+                            <ul>
+                                <li><a href="./services.html">Networking</a></li>
+                                <li><a href="./services.html">IoT Development</a></li>
+                                <li><a href="./services.html">Linux Server</a></li>
+                                <li><a href="./services.html">AI Vision</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5>Stay Updated</h5>
+                            <p>Subscribe to receive updates on my latest technical articles, project tutorials, and industry insights in network engineering and IoT.</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email address">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer__copyright__text">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | Ervan Fahri Adriansyah Wahab
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
